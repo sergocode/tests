@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Регистрация</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<div class="device_type"></div>
+	<div id="vue" class="reg_form">
+		<div v-if="end_mess" id="message">Регистрация завершена!</div>
+		<div v-if="end_reg">
+			<div v-if="name_error" class="warning">Поле обязательно для заполнения</div>
+			<input placeholder="Фамилия Имя Отчество" class="name" type="text" name="" v-model="Fullname">
+			<div v-if="mail_error" class="warning">Поле обязательно для заполнения</div>
+			<input placeholder="Почта" class="mail" type="text" name="" v-model="mail">
+			<div v-if="password_error" class="warning">Поле обязательно для заполнения</div>
+			<input placeholder="Пароль" class="password" type="text" name="" v-model="password">
+			<div v-if="number_error" class="warning">Поле обязательно для заполнения</div>
+			<input placeholder="Телефон" class="number" type="text" name="" v-model="number">
+			<button v-on:click="check" class="button">Регистрация</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
