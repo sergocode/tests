@@ -1,1 +1,1 @@
-![Иллюстрация к проекту](http://g.recordit.co/vaB6i2FCkv.gif)
+![Иллюстрация к проекту](http://g.recordit.co/PRI66L8MWJ.gif)
