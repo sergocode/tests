@@ -1,0 +1,201 @@
+
+/* ------ STYLE SELECT ----------------  */
+/* Основная часть */
+.cusel {
+	margin: 12px 12px 0px 4.5px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	color: #55493f;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 400;
+	width: 310px;
+	height: 31px;
+	box-shadow: inset 0 0 0 #8d5408;
+	border: 1px solid #cd8e31;
+	background-color: #ffffff;
+	vertical-align: middle;
+	cursor: pointer;
+}
+/* Стрелочка справа */
+.cuselFrameRight {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	width: 27px;
+	height: 31px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAACk0lEQVRIS71WvWtTURT/Har4/ILi1GgRF0WcbCgSHB0dFQerTW2SuujSbGJnN7M4qGAFhWzNV8FNXATtICkNfvQPeNdo4yBYaETLlfvuOzfJzUtfYj7ecjmc3PPLued3fufQz/KyhJQAEQAJgDAsm76/vieJCFJKkAJSgE22hMTA/KIQb2TGGQ7pJHflunq7kXzk5mZGmdmMKpbhBnNkGCeJ3A2pSOCxUJEBBGMr0iiyDMhP7orKTAH5n2mDwdvk5m5KLyOf7ibDIdgajGvG2XWqYZ9+EvlZ9XA+HteMbfvsz09uftb0mZ2g3Xyen/9ZQGeG3lcKYgvG4+xHVDZ//Hejx85PYO7qWSOxHJ/cfLyhjT4p6r93kVleh/ttu2fAyYkjSCen4BwYa2gqa60o3PL6jPuLz3p9F/cfvsNO/W/XgMfGHSzduQDHGWuLp+KSW5iTGqCdJKK6jczzcleAB519SCeiOBE57AMFkE4U56U3XjjVlhOobNbwJFsJzW4xGcXpU+NWHD0mOT65xXnJLPMcnKE/T5W9Vq7iZf5zR8D4lXOITUV04ID7Jr4oJbT0sRZ3aPAXuU9YW6+2AV66eBLXLp8Jva9+QG4x4desdSLbE1rZT7Mb2PhSM4Cx6HGorAy59pjwXjxRSvqi3pSS9xbt9k79DzLPPsCt/sJk5CjSqWkoYui3C7+vwfyxYnaQPWwGXExN45Cz3wxCbh+uWqAtVhdGOKlLKa9m9lY1DJt0Zt29uRa7ANp2eZ9EaUFP6k6Lqq3S9iLbg5/E6u3RrXJfX901k9qsBqaEelNulLRPe+vNks4sbPKFqWMX96n29kHbPGve7VuUxBZr7sdAEW8aW+zfev+oaS1k9e31tNU3+P4/m0mf+1TpXVQAAAAASUVORK5CYII=) no-repeat center;
+}
+/* Текст в селекте */
+.cuselText { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 30px;
+	padding: 6.5px 6.5px 0 12px; 
+	color: #55493f;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 400;
+    cursor: pointer;
+	overflow: hidden;
+}
+* html .cuselText {height: 30px;}
+
+/* Оформление пунктов списка */
+.cusel span { 
+	display: block;
+	padding: 6.5px 15px; 
+	color: #55493f;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: 400;
+	zoom: 1;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+/* Оформление пунктов списка при наведении*/
+.cusel span:hover,
+.cusel .cuselOptHover { background: #facf93;}
+
+/* Оформление активного пункта списка  */
+.cusel .cuselActive,
+.cusel .cuselActive:hover { background: #d8af75;}
+
+/* Оформление селекта при наведении и клике */
+.cusel:hover,
+.cusel:focus,
+.cuselFocus {background:#fff;}
+
+/* Оформление стрелки при наведении и клике */
+.cusel:hover .cuselFrameRight,
+.cusel:focus .cuselFrameRight,
+.cuselFocus .cuselFrameRight {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAfCAYAAAAWRbZDAAACk0lEQVRIS71WvWtTURT/Har4/ILi1GgRF0WcbCgSHB0dFQerTW2SuujSbGJnN7M4qGAFhWzNV8FNXATtICkNfvQPeNdo4yBYaETLlfvuOzfJzUtfYj7ecjmc3PPLued3fufQz/KyhJQAEQAJgDAsm76/vieJCFJKkAJSgE22hMTA/KIQb2TGGQ7pJHflunq7kXzk5mZGmdmMKpbhBnNkGCeJ3A2pSOCxUJEBBGMr0iiyDMhP7orKTAH5n2mDwdvk5m5KLyOf7ibDIdgajGvG2XWqYZ9+EvlZ9XA+HteMbfvsz09uftb0mZ2g3Xyen/9ZQGeG3lcKYgvG4+xHVDZ//Hejx85PYO7qWSOxHJ/cfLyhjT4p6r93kVleh/ttu2fAyYkjSCen4BwYa2gqa60o3PL6jPuLz3p9F/cfvsNO/W/XgMfGHSzduQDHGWuLp+KSW5iTGqCdJKK6jczzcleAB519SCeiOBE57AMFkE4U56U3XjjVlhOobNbwJFsJzW4xGcXpU+NWHD0mOT65xXnJLPMcnKE/T5W9Vq7iZf5zR8D4lXOITUV04ID7Jr4oJbT0sRZ3aPAXuU9YW6+2AV66eBLXLp8Jva9+QG4x4desdSLbE1rZT7Mb2PhSM4Cx6HGorAy59pjwXjxRSvqi3pSS9xbt9k79DzLPPsCt/sJk5CjSqWkoYui3C7+vwfyxYnaQPWwGXExN45Cz3wxCbh+uWqAtVhdGOKlLKa9m9lY1DJt0Zt29uRa7ANp2eZ9EaUFP6k6Lqq3S9iLbg5/E6u3RrXJfX901k9qsBqaEelNulLRPe+vNks4sbPKFqWMX96n29kHbPGve7VuUxBZr7sdAEW8aW+zfev+oaS1k9e31tNU3+P4/m0mf+1TpXVQAAAAASUVORK5CYII=) no-repeat center;
+}
+
+/* видимость выпадающего списка */
+.cuselOpen {z-index: 999;}
+
+/* Оформление селекта и стрелки disabled */
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+	background-image: url(../img/select_bg_arrow.png) no-repeat center;
+	cursor: default;
+	color: #fff;
+}
+/* Оформление текста в селекте когда он disabled */
+.classDisCusel .cuselText {
+	cursor: default;
+	color: #fff;
+}
+
+/* Оформление выпадающего списка */
+.cusel .cusel-scroll-wrap {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	display: block;
+	min-width: 100%;
+	width: 203px;
+	height: auto !important;
+	visibility: hidden;
+	margin-left: -1px;
+	padding: 0;
+	border: 1px solid #cd8e31;
+	background-color: #fcebc6;
+	overflow: hidden;
+    
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -ms-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+    background-color: #fcebc6;
+}
+/* блок для элементов списка с отступом справа для скролла */
+.cusel-scroll-pane {
+	top: 5px;
+	right: 3px;
+	left: 0;
+	width: auto !important;
+}
+
+/* Линия по которой будет проходить скролл */
+.cusel .jScrollPaneTrack {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	height: 100%;
+	width: 5px !important;
+	background: #EEE;
+}
+
+/* кнопка для скролла */
+.cusel .jScrollPaneDrag {
+	position: absolute;
+	left: 0px;
+	width: 5px !important;
+	height: 27px !important;
+	background: #6E939E;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+/* эти 2 стиля не трогаем */
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0 !important;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0 !important;
+	overflow: hidden;
+}
+
+/* Стрелка вверху для скролла */
+.cusel .jScrollArrowUp {
+	position: absolute;
+	top: 0;
+	right: 4px;
+	width: 0 !important;
+	height: 0;
+	cursor: pointer;
+	overflow: hidden;	
+}
+
+/* Стрелка внизу для скролла */
+.cusel .jScrollArrowDown {
+	width: 0 !important;
+	height: 0;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 4px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.mini {
+	width: 203px;
+	margin: 56px 0px 0px 49px;
+}
+
+.min1iO  {
+width: 203px;
+}
